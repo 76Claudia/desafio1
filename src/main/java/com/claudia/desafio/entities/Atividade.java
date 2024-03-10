@@ -58,6 +58,22 @@ public class Atividade {
     @ManyToOne
     @JoinColumn(name = "categoria_id")
     private Atividade categoria;
+    @OneToOne(mappedBy = "atividade", cascade = CascadeType.ALL)
+    private Bloco bloco;
 
+    public Atividade getCategoria() {
+        return categoria;
+    }
 
+    public void setCategoria(Atividade categoria) {
+        this.categoria = categoria;
+    }
+
+    public Bloco getBloco() {
+        return bloco;
+    }
+
+    public void setBloco(Bloco bloco) {
+        this.bloco = bloco;
+    }
 }
