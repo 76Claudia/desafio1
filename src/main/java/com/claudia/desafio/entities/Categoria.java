@@ -2,6 +2,9 @@ package com.claudia.desafio.entities;
 
 import jakarta.persistence.*;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Entity
 @Table(name = "tb_categoria")
 public class Categoria {
@@ -9,6 +12,7 @@ public class Categoria {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String descricao;
+
 
     public Categoria(){
 
@@ -31,7 +35,14 @@ public class Categoria {
         return descricao;
     }
 
+
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
+
+
+
 }
+
+
+
